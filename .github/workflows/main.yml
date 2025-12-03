@@ -2,7 +2,7 @@ name: python
 
 on: [push]
 
-job:
+jobs:
   env:
     ENTORNO: DEVELOPMNET
   snake:
