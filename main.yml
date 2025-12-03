@@ -1,0 +1,21 @@
+name: python
+
+on: [push]
+
+job:
+  env:
+    ENTORNO: DEVELOPMNET
+  snake:
+    runs-on: rocky-latest
+  steps:
+    - uses: actions/checkout@v5
+    - uses: actions/setup-python@v6
+      with:
+        python-version: '3.13' 
+    - run: python my_script.py
+  steps:
+    name: checkout
+    run: |
+      python --version
+      echo "$ENTORNO"
+
